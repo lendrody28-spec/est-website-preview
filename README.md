@@ -8,6 +8,11 @@
 - Off-white `#F5F1E9`
 - Light blue info bands
 
+## Brand hierarchy
+- Header / lockup primary = **Smart Guardian** / **Smart Shield** (dual on home)
+- **Endrody** / Endrody Safety Technologies = smaller parent line underneath
+- Footer may still say Endrody Collective / EST as company
+
 ## Motto
 **Because every journey should end at home.**
 
@@ -16,7 +21,7 @@
 |------|-----|
 | `index.html` | Boss mobile wireframe: shield mark · motto · Explore Guardian · Guardian/Shield feature rows · then UX KEEP (roadmap, how 01–05, families, trust) |
 | `smart-guardian.html` | Crash Assist & Emergency Protection · ship-today honesty |
-| `smart-shield.html` | Integrity / anti-tamper · **name unchanged** (Legal rename WAITING) |
+| `smart-shield.html` | Headline: protect vehicle safety-system integrity · Available now — core integrity monitoring · **name unchanged** |
 | `how-it-works.html` | Drive → Detect → Assess → Assist → Notify |
 | `privacy.html` | Links live Google Sites Privacy |
 | `terms.html` | Terms PREP (not lawyer-reviewed) |
@@ -29,6 +34,8 @@ Shared: `styles.css` · `site.js` (hamburger only in chrome; Help & Assistance i
 - Do **not** rename Shield → Legal yet
 - Assist ≠ AI · Call 000 honesty · Legal PREP
 - Broader vehicle tech = vision/roadmap — never claim live ADAS/hardware you don’t ship
+- Never claim bank-level / unverified security standards
+- Tone: Apple simplicity + modern automotive + emergency reliability + warm family — motto anchors emotion
 - Free only — no paid hosting
 
 ## Assets
