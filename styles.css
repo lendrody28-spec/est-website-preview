@@ -22,11 +22,21 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans
 a{color:var(--navy);text-underline-offset:3px}a:hover{color:var(--gold-deep)}
 img{max-width:100%;display:block}
 .wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+
+/* —— Header: product primary + Endrody parent + hamburger —— */
 .site-header{position:sticky;top:0;z-index:40;background:rgba(16,36,66,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(233,168,79,.28)}
 .nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;flex-direction:column;gap:1px;text-decoration:none;color:#fff;min-width:0}
-.brand strong{font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
-.brand span{font-size:.68rem;color:rgba(245,241,233,.72);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand strong{font-size:.95rem;letter-spacing:.02em;font-weight:800;text-transform:none}
+.brand span{font-size:.65rem;color:rgba(245,241,233,.68);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.brand .by{font-weight:500;opacity:.9}
+/* Product-first lockups: Endrody = smaller parent line */
+.parent-brand{margin:0 0 14px;font-size:.78rem;font-weight:600;color:var(--slate);letter-spacing:.02em}
+.page-hero .parent-brand{margin:2px 0 14px;color:var(--slate)}
+.hero .parent-brand{margin:4px 0 14px;color:rgba(245,241,233,.62);font-size:.78rem;font-weight:600}
+.product-lockup{margin:0 0 2px;font-size:clamp(1.15rem,3vw,1.45rem);font-weight:800;letter-spacing:-.02em;color:var(--gold);line-height:1.2}
+.hero .product-lockup{color:var(--gold)}
+.page-hero h1 + .parent-brand{margin-top:-4px}
 .nav-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;padding:var(--cta-pad);font-weight:800;font-size:var(--cta-fs);text-decoration:none;line-height:1.2;border:1.5px solid transparent;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
 .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--navy-deep)}
@@ -48,6 +58,8 @@ img{max-width:100%;display:block}
 .drawer a:hover,.drawer a.active{color:var(--gold)}
 .drawer .drawer-help{margin-top:16px}
 .drawer .motto-foot{margin:18px 0 0;color:rgba(233,168,79,.85);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800}
+
+/* —— Hero —— */
 .hero{position:relative;padding:72px 0 56px;color:#fff;overflow:hidden;background:var(--navy)}
 .hero-bg{position:absolute;inset:0;background:
   linear-gradient(165deg,rgba(16,36,66,.88) 0%,rgba(11,31,58,.78) 45%,rgba(16,36,66,.92) 100%),
@@ -68,6 +80,8 @@ img{max-width:100%;display:block}
 .icon-pill{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(110,198,217,.25);border-radius:14px;padding:12px 14px}
 .icon-pill .glyph{width:34px;height:34px;border-radius:10px;background:rgba(110,198,217,.15);border:1px solid rgba(110,198,217,.35);display:grid;place-items:center;color:var(--cyan);flex-shrink:0;font-size:1rem}
 .icon-pill span{font-size:.82rem;font-weight:700;color:rgba(245,241,233,.92);line-height:1.25}
+
+/* —— Sections —— */
 .section{padding:52px 0}
 .section.alt{background:#ebe4d8}
 .section.info{background:var(--info);border-top:1px solid var(--info-border);border-bottom:1px solid var(--info-border)}
@@ -77,8 +91,11 @@ img{max-width:100%;display:block}
 .section-intro{color:var(--slate);max-width:640px;margin:0 0 24px;font-size:1rem}
 .section.navy .section-intro{color:rgba(245,241,233,.8)}
 .page-hero{padding:48px 0 28px}
-.page-hero h1{color:var(--navy);font-size:clamp(1.9rem,4.5vw,2.8rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 12px;max-width:780px}
+.page-hero h1{color:var(--navy);font-size:clamp(1.9rem,4.5vw,2.8rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 6px;max-width:780px}
 .page-hero p{color:var(--slate);font-size:1.05rem;max-width:680px;margin:0}
+.page-hero .lede-sub{margin:0 0 10px;font-size:1.05rem;font-weight:700;color:var(--navy)}
+
+/* —— Product visual cards —— */
 .product-block{display:grid;gap:18px}
 .product-visual{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--white)}
 .product-visual .media{aspect-ratio:16/9;background:var(--navy);position:relative;overflow:hidden}
@@ -96,17 +113,23 @@ img{max-width:100%;display:block}
 .feat.secure .fi,.feat.integrity .fi,.feat.privacy .fi{background:rgba(233,168,79,.18);color:var(--gold)}
 .feat strong{display:block;font-size:.92rem;margin-bottom:4px}
 .feat p{margin:0;font-size:.8rem;color:rgba(245,241,233,.78);line-height:1.4}
+
+/* —— Roadmap —— */
 .roadmap{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--navy);border-radius:20px;padding:22px;color:#fff;box-shadow:var(--shadow)}
 .roadmap h3{margin:0 0 10px;color:var(--gold);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
 .roadmap ul{margin:0;padding-left:1.1rem;color:rgba(245,241,233,.88)}
 .roadmap li{margin:.4rem 0}
 .roadmap .col{background:rgba(255,255,255,.05);border:1px solid rgba(110,198,217,.2);border-radius:14px;padding:16px}
+
+/* —— How it works 01–05 —— */
 .steps{display:grid;gap:0;position:relative;max-width:720px}
 .step{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:14px 0;position:relative}
 .step:not(:last-child)::before{content:"";position:absolute;left:25px;top:46px;bottom:-2px;width:2px;background:linear-gradient(var(--gold),rgba(233,168,79,.2))}
 .step .num{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:900;font-size:.95rem;border:2px solid rgba(233,168,79,.45);z-index:1}
 .step h3{margin:4px 0 4px;color:var(--navy);font-size:1.1rem}
 .step p{margin:0;color:var(--slate);font-size:.95rem}
+
+/* —— Families / Trust —— */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .cards.three{grid-template-columns:repeat(3,1fr)}
 .cards.two{grid-template-columns:repeat(2,1fr)}
@@ -118,6 +141,7 @@ img{max-width:100%;display:block}
 .trust-item{background:rgba(255,255,255,.06);border:1px solid rgba(110,198,217,.22);border-radius:14px;padding:16px}
 .trust-item strong{display:block;color:var(--gold);margin-bottom:6px;font-size:.95rem}
 .trust-item p{margin:0;color:rgba(245,241,233,.82);font-size:.88rem}
+
 .pill{display:inline-block;border-radius:999px;padding:4px 10px;background:#e8eef5;color:var(--navy);font-weight:800;font-size:.72rem}
 .pill.gold{background:#f6e7c8;color:#6a4e08}
 .pill.ok{background:#e4f3ea;color:#2d5a3d}
@@ -144,6 +168,8 @@ img{max-width:100%;display:block}
 .honesty{font-size:.9rem;color:rgba(245,241,233,.78);margin:16px 0 0;max-width:640px}
 .banner-media{border-radius:var(--radius);overflow:hidden;margin:0 0 22px;border:1px solid var(--line);aspect-ratio:21/9;background:var(--navy)}
 .banner-media img{width:100%;height:100%;object-fit:cover}
+
+/* —— Footer —— */
 .footer{background:var(--navy-deep);color:#e8eef5;padding:40px 0 22px}
 .footer a{color:#f0d9a8;text-decoration:none}.footer a:hover{color:var(--gold)}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
@@ -151,6 +177,7 @@ img{max-width:100%;display:block}
 .footer p,.footer li{color:#c5d0da;font-size:.9rem;margin:0}
 .footer small{display:block;border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:14px;color:#9aa8b8;font-size:.78rem;line-height:1.5}
 .footer .motto{color:var(--gold);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;margin-top:8px}
+
 @media(max-width:900px){
   .feat-grid,.cards,.cards.three,.cards.two,.trust-grid,.roadmap,.split,.footer-grid,.form-grid,.icon-row{grid-template-columns:1fr}
   .feat-grid{grid-template-columns:1fr}
