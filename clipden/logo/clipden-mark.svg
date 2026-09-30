@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="ClipDen mark">
+  <title>ClipDen</title>
+  <rect width="128" height="128" rx="30" fill="#4A2C40"/>
+  <!-- Clear open scissors -->
+  <g transform="translate(64 64)">
+    <!-- Blades (cream) -->
+    <path d="M6 2 L46 -34 C48 -36 52 -34 50 -30 L14 10 Z" fill="#FAF6F1"/>
+    <path d="M-2 6 L-34 46 C-36 48 -34 52 -30 50 L10 14 Z" fill="#FAF6F1"/>
+    <!-- Upper handle ring sage -->
+    <circle cx="-30" cy="-30" r="17" fill="none" stroke="#5B8A72" stroke-width="10"/>
+    <circle cx="-30" cy="-30" r="6" fill="#4A2C40"/>
+    <path d="M-18 -18 L-4 -4" stroke="#FAF6F1" stroke-width="12" stroke-linecap="round"/>
+    <!-- Lower handle ring -->
+    <circle cx="30" cy="30" r="17" fill="none" stroke="#FAF6F1" stroke-width="10"/>
+    <path d="M20 40 A17 17 0 0 0 40 20" fill="none" stroke="#5B8A72" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="6" fill="#4A2C40"/>
+    <path d="M4 4 L18 18" stroke="#FAF6F1" stroke-width="12" stroke-linecap="round"/>
+    <!-- Pivot blush -->
+    <circle cx="0" cy="0" r="10" fill="#C97B84"/>
+    <circle cx="0" cy="0" r="4" fill="#FAF6F1"/>
+  </g>
+</svg>

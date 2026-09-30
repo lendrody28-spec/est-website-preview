@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="ClipDen">
+  <title>ClipDen</title>
+  <svg x="0" y="8" width="80" height="80" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="30" fill="#FAF6F1"/>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M58 66 L98 28" stroke="#4A2C40" stroke-width="14"/>
+      <path d="M98 28 L108 22 L104 36 Z" fill="#4A2C40" stroke="none"/>
+      <path d="M62 62 L24 100" stroke="#4A2C40" stroke-width="14"/>
+      <path d="M24 100 L14 106 L28 96 Z" fill="#4A2C40" stroke="none"/>
+      <circle cx="36" cy="36" r="16" stroke="#5B8A72" stroke-width="9"/>
+      <circle cx="36" cy="36" r="5.5" fill="#FAF6F1" stroke="none"/>
+      <path d="M48 48 L58 58" stroke="#4A2C40" stroke-width="11"/>
+      <circle cx="92" cy="92" r="16" stroke="#4A2C40" stroke-width="9"/>
+      <path d="M82 100 A16 16 0 0 0 100 82" stroke="#5B8A72" stroke-width="9"/>
+      <circle cx="92" cy="92" r="5.5" fill="#FAF6F1" stroke="none"/>
+      <path d="M70 70 L80 80" stroke="#4A2C40" stroke-width="11"/>
+      <circle cx="60" cy="64" r="9" fill="#C97B84" stroke="none"/>
+      <circle cx="60" cy="64" r="3.5" fill="#FAF6F1" stroke="none"/>
+    </g>
+  </svg>
+  <text x="100" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" letter-spacing="-1.8" fill="#FAF6F1">ClipDen</text>
+</svg>
