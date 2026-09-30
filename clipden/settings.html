@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ClipDen Network — a warm local hair and barber discovery companion stub.">
+<title>Settings · ClipDen Network</title>
+<link rel="icon" href="logo/clipden-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="logo/clipden-mark-render.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="wrap nav">
+<a class="brand" href="index.html" aria-label="ClipDen Network home">
+<span class="brand-mark" aria-hidden="true"><img src="logo/clipden-mark.svg" alt=""></span>
+<span><span class="brand-word">ClipDen</span><span class="brand-sub">Network</span></span>
+</a>
+<nav class="nav-links" aria-label="Primary">
+<a href="index.html">Home</a>
+<a href="feed.html">Style feed</a>
+<a href="for-clients.html">For clients</a>
+<a href="for-providers.html">For providers</a>
+<a class="active" href="settings.html">Settings</a>
+<a href="privacy.html">Privacy</a>
+<a class="btn btn-plum btn-sm" href="help-assist-contact.html">Help / Assist</a>
+</nav>
+<button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+<div class="drawer" id="navDrawer" aria-hidden="true"><div class="wrap">
+<nav aria-label="Site">
+<a href="index.html">Home</a>
+<a href="feed.html">Style feed</a>
+<a href="for-clients.html">For clients</a>
+<a href="for-providers.html">For providers</a>
+<a class="active" href="settings.html">Settings</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms-prep.html">Terms (PREP)</a>
+<a href="help-assist-contact.html">Help / Assist / Contact</a>
+</nav>
+<a class="btn btn-sage drawer-cta" href="help-assist-contact.html">Help / Assist / Contact →</a>
+</div></div>
+</header>
+<main>
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Account · web has more room</p><h1>Settings with more control than the phone stub.</h1><p>Boss KEEP: the website mirrors the app and can carry richer settings — privacy, preferences, notifications, area, and what shows in your style news feed.</p></div></section>
+<section class="section"><div class="wrap">
+<div class="profile-shell">
+<p class="eyebrow">Preview toggles</p><h2 style="margin:0 0 18px;color:var(--plum)">Feed &amp; discovery</h2>
+<div class="form-grid">
+<div class="field"><label>Area</label><select disabled><option>Toowoomba / Lockyer · SEQ</option><option>Brisbane</option><option>Ipswich / Gatton</option></select></div>
+<div class="field"><label>Feed topics</label><select disabled><option>All hair &amp; fashion</option><option>Men’s / barber</option><option>Women’s cuts &amp; colour</option></select></div>
+<div class="field full"><label class="check"><input type="checkbox" checked disabled> Show curated style news (Vogue, Allure, GQ, Vogue AU…)</label></div>
+<div class="field full"><label class="check"><input type="checkbox" checked disabled> Prefer Australian hubs when available</label></div>
+<div class="field full"><label class="check"><input type="checkbox" disabled> Local provider posts in feed (later)</label></div>
+</div>
+<hr style="border:0;border-top:1px solid var(--line);margin:28px 0">
+<p class="eyebrow">Boss KEEP · optional</p><h2 style="margin:0 0 18px;color:var(--plum)">Preferences</h2>
+<p class="micro" style="margin-top:0">Tap <strong>Gender</strong> to choose Male or Female. Personalises style-feed trends — not a gate. Leave unset to see both Men and Women lanes.</p>
+<div class="pref-panel" id="pref-panel">
+<button type="button" class="pref-row" id="gender-row" aria-expanded="false" aria-controls="gender-pick">
+<span class="pref-label">Gender</span>
+<span class="pref-value" id="gender-value">Not set</span>
+<span class="pref-chevron" aria-hidden="true">›</span>
+</button>
+<div class="gender-pick" id="gender-pick" hidden>
+<button type="button" class="gender-option" data-gender="male" id="opt-male">Male</button>
+<button type="button" class="gender-option" data-gender="female" id="opt-female">Female</button>
+</div>
+<label class="check pref-toggle"><input type="checkbox" id="grooming-toggle"> Show grooming / facial hair</label>
+</div>
+<p class="micro" id="pref-saved-note" style="margin-top:10px">Saved on this device for the style feed preview.</p>
+<script>
+(function(){
+  var KEY='sc_gender', GROOM='sc_grooming';
+  var row=document.getElementById('gender-row');
+  var pick=document.getElementById('gender-pick');
+  var valEl=document.getElementById('gender-value');
+  var groom=document.getElementById('grooming-toggle');
+  var opts=document.querySelectorAll('.gender-option');
+  function label(g){return g==='male'?'Male':g==='female'?'Female':'Not set';}
+  function sync(){
+    var g=localStorage.getItem(KEY)||'';
+    valEl.textContent=label(g);
+    opts.forEach(function(b){b.classList.toggle('selected', b.getAttribute('data-gender')===g);});
+    var gs=localStorage.getItem(GROOM);
+    groom.checked = gs===null ? true : gs==='1';
+  }
+  row.addEventListener('click', function(){
+    var open=row.getAttribute('aria-expanded')==='true';
+    row.setAttribute('aria-expanded', open?'false':'true');
+    pick.hidden=open;
+  });
+  opts.forEach(function(b){
+    b.addEventListener('click', function(){
+      var g=b.getAttribute('data-gender');
+      localStorage.setItem(KEY,g);
+      sync();
+      row.setAttribute('aria-expanded','false');
+      pick.hidden=true;
+    });
+  });
+  groom.addEventListener('change', function(){
+    localStorage.setItem(GROOM, groom.checked?'1':'0');
+  });
+  sync();
+})();
+</script>
+<hr style="border:0;border-top:1px solid var(--line);margin:28px 0">
+<p class="eyebrow">Boss KEEP · first-class</p><h2 style="margin:0 0 18px;color:var(--plum)">Beard &amp; moustache styles</h2>
+<p class="micro" style="margin-top:0">Facial-hair fashion is a first-class preference — same pattern as hair galleries. Fashion &amp; grooming only; no medical claims.</p>
+<div class="form-grid">
+<div class="field"><label>Beard interest</label><select disabled><option>Not set</option><option>Full beard</option><option>Short boxed</option><option>Corporate / trimmed</option><option>Stubble / designer</option><option>Goatee</option><option>Van Dyke</option><option>Faded beard</option></select></div>
+<div class="field"><label>Moustache interest</label><select disabled><option>Not set</option><option>Chevron</option><option>Handlebar</option><option>Pencil</option><option>Walrus</option><option>Horseshoe</option><option>Moustache only</option></select></div>
+<div class="field full"><label class="check"><input type="checkbox" checked disabled> Include grooming / beard trend cards in style feed</label></div>
+<div class="field full"><label class="check"><input type="checkbox" disabled> Show facial-hair prefs on my profile (opt-in)</label></div>
+</div>
+<hr style="border:0;border-top:1px solid var(--line);margin:28px 0">
+<p class="eyebrow">Privacy (richer on web)</p><h2 style="margin:0 0 18px;color:var(--plum)">Show / hide</h2>
+<table class="privacy-table"><thead><tr><th>Field</th><th>Default</th><th>Web setting</th></tr></thead><tbody>
+<tr><td>Home address</td><td>Hidden</td><td><span class="pill">Hidden</span></td></tr>
+<tr><td>Style preferences</td><td>Opt-in</td><td><span class="pill sage">You choose</span></td></tr>
+<tr><td>Self photo</td><td>Opt-in</td><td><span class="pill sage">You choose</span></td></tr>
+<tr><td>Notifications</td><td>Off until allowed</td><td><span class="pill">Off</span></td></tr>
+</tbody></table>
+<p class="micro mt">Gender and grooming save on this device (localStorage) for the feed preview. Other toggles are visual stubs. Sign-in (Google → Apple on iOS → email) follows the Collective multi-signin KEEP when wired.</p>
+<div class="actions mt"><a class="btn btn-plum" href="feed.html">Open style feed</a><a class="btn btn-outline" href="privacy.html">Full privacy page</a></div>
+</div>
+</div></section>
+</main>
+
+<nav class="app-dock" aria-label="App shortcuts">
+<a  href="index.html"><span aria-hidden="true">⌂</span>Home</a>
+<a  href="feed.html"><span aria-hidden="true">✦</span>Feed</a>
+<a  href="for-clients.html"><span aria-hidden="true">⌖</span>Find</a>
+<a class="active" href="settings.html"><span aria-hidden="true">⚙</span>Prefs</a>
+<a  href="help-assist-contact.html"><span aria-hidden="true">?</span>Help</a>
+</nav>
+
+<footer class="footer"><div class="wrap">
+<div class="footer-grid">
+<div>
+<a class="brand" href="index.html" aria-label="ClipDen Network">
+<span class="brand-mark" aria-hidden="true"><img src="logo/clipden-mark.svg" alt=""></span>
+<span><span class="brand-word">ClipDen</span><span class="brand-sub">Network</span></span>
+</a>
+<p class="mt">People-first local hair and barber companion, prepared with Soft Chair honesty.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<p><a href="feed.html">Style news feed</a><br>
+<a href="for-clients.html">For clients</a><br>
+<a href="for-providers.html">For providers</a><br>
+<a href="settings.html">Settings</a><br>
+<a href="privacy.html">Privacy</a><br>
+<a href="terms-prep.html">Terms (PREP)</a></p>
+</div>
+<div>
+<h3>Need a hand?</h3>
+<p><a href="help-assist-contact.html">Help / Assist / Contact Us</a><br>
+Free static preview · no account required</p>
+</div>
+</div>
+<small>Preparation stub only · No store upload · No paid hosting · No payment or live booking in this preview · New ClipDen mark.</small>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>

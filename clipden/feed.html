@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ClipDen Network — a warm local hair and barber discovery companion stub.">
+<title>Style news feed · ClipDen Network</title>
+<link rel="icon" href="logo/clipden-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="logo/clipden-mark-render.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="wrap nav">
+<a class="brand" href="index.html" aria-label="ClipDen Network home">
+<span class="brand-mark" aria-hidden="true"><img src="logo/clipden-mark.svg" alt=""></span>
+<span><span class="brand-word">ClipDen</span><span class="brand-sub">Network</span></span>
+</a>
+<nav class="nav-links" aria-label="Primary">
+<a href="index.html">Home</a>
+<a class="active" href="feed.html">Style feed</a>
+<a href="for-clients.html">For clients</a>
+<a href="for-providers.html">For providers</a>
+<a href="settings.html">Settings</a>
+<a href="privacy.html">Privacy</a>
+<a class="btn btn-plum btn-sm" href="help-assist-contact.html">Help / Assist</a>
+</nav>
+<button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+<div class="drawer" id="navDrawer" aria-hidden="true"><div class="wrap">
+<nav aria-label="Site">
+<a href="index.html">Home</a>
+<a class="active" href="feed.html">Style feed</a>
+<a href="for-clients.html">For clients</a>
+<a href="for-providers.html">For providers</a>
+<a href="settings.html">Settings</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms-prep.html">Terms (PREP)</a>
+<a href="help-assist-contact.html">Help / Assist / Contact</a>
+</nav>
+<a class="btn btn-sage drawer-cta" href="help-assist-contact.html">Help / Assist / Contact →</a>
+</div></div>
+</header>
+<main>
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Connected · style news</p><h1>Scroll haircut &amp; fashion trends like a feed.</h1><p>When you’re signed in, ClipDen can show a Facebook-style stream of modern cuts, colour, and barber news — filtered by your preferences. Cards open trusted publishers. This preview uses curated static links.</p>
+<div class="actions mt"><a class="btn btn-plum" href="settings.html">Feed &amp; preference settings</a><a class="btn btn-outline" href="for-clients.html">Nearby providers</a></div>
+</div></section>
+<section class="section sage-wash"><div class="wrap">
+<p class="eyebrow">Tonight’s curated drops</p><h2>Haircut style news</h2>
+<p class="section-intro">External articles open on the publisher site. We don’t scrape paywalled full text.</p>
+<div class="lane-strip" id="lane-strip" aria-live="polite">
+<span class="lane-chip" id="chip-women">Women trends</span>
+<span class="lane-chip" id="chip-men">Men trends</span>
+<span class="lane-note" id="lane-note">Showing both lanes · set Gender in Settings to personalise.</span>
+</div>
+<div class="feed" id="style-feed">
+<div class="feed-item" data-lane="women"><div class="avatar">V</div><div><span class="pill">Women · runway → wearable</span><br><strong>16 hair trends you’re about to see everywhere in 2026</strong><br><small>Vogue · polished, personal, natural movement</small><br><a href="https://www.vogue.com/article/hair-trends-2026" target="_blank" rel="noopener noreferrer">Read on Vogue</a> · <span class="pill sage">Set as target later</span></div></div>
+<div class="feed-item" data-lane="women"><div class="avatar" style="background:var(--sage)">A</div><div><span class="pill">Women · colour · cut</span><br><strong>Spring 2026 haircut &amp; colour trends</strong><br><small>Allure · soft shags, gentle layers, collarbone lengths</small><br><a href="https://www.allure.com/story/spring-hair-trends-2026-haircut-color" target="_blank" rel="noopener noreferrer">Read on Allure</a></div></div>
+<div class="feed-item" data-lane="men"><div class="avatar" style="background:var(--plum)">G</div><div><span class="pill">Men · barber</span><br><strong>Best men’s hair trends of 2026</strong><br><small>GQ · soft mullets, texture, less severe fades</small><br><a href="https://www.gq.com/story/best-hair-trends-for-men-2026" target="_blank" rel="noopener noreferrer">Read on GQ</a></div></div>
+<div class="feed-item" data-lane="women"><div class="avatar">AU</div><div><span class="pill">Women · Australia</span><br><strong>Vogue Australia — Beauty / Hair hub</strong><br><small>Local fashion + hair &amp; colour coverage</small><br><a href="https://www.vogue.com.au/beauty/hair" target="_blank" rel="noopener noreferrer">Browse Vogue AU Hair</a></div></div>
+<div class="feed-item" data-lane="men"><div class="avatar" style="background:var(--blush)">GQ</div><div><span class="pill">Men · AU barbers</span><br><strong>GQ Australia — Barbers</strong><br><small>Best shops, grooming culture, men’s cuts</small><br><a href="https://www.gq.com.au/topics/barbers" target="_blank" rel="noopener noreferrer">Browse GQ AU Barbers</a></div></div>
+<div class="feed-item" data-lane="both"><div class="avatar" style="background:var(--sage)">A</div><div><span class="pill">Both · seasonal</span><br><strong>Summer 2026 haircut trends</strong><br><small>Allure · throwbacks with modern wearability</small><br><a href="https://www.allure.com/story/summer-haircut-trends-2026" target="_blank" rel="noopener noreferrer">Read on Allure</a></div></div>
+<div class="feed-item" data-lane="men"><div class="avatar">B</div><div><span class="pill">Men · trade</span><br><strong>2026 men’s trends barbers should be ready to cut</strong><br><small>My Barber Tools · textured crops, soft tapers, matte finishes</small><br><a href="https://mybarbertools.co.uk/blogs/news/2026-mens-hair-trends-every-barber-should-be-ready-to-cut" target="_blank" rel="noopener noreferrer">Read article</a></div></div>
+<div class="feed-item" data-lane="men" data-grooming="1"><div class="avatar" style="background:var(--plum)">✂</div><div><span class="pill">Men · beard / moustache</span><br><strong>Grooming trend slot (pref-aware)</strong><br><small>When grooming is on in Settings, curated beard &amp; moustache cards sit in the same scroll — Soft Chair, fashion only.</small><br><span class="pill sage">KEEP · first-class preference</span></div></div>
+</div>
+<div class="notice mt"><strong>Prep honesty:</strong> This is a static companion stub. Live personalised ranking and local “echo” cards (nearby pros offering the look) come later. Full source list is on the desk in <code>STYLE-NEWS-FEED-SOURCES.md</code>.</div>
+</div></section>
+<script>
+(function(){
+  var KEY='sc_gender', GROOM='sc_grooming';
+  var gender=localStorage.getItem(KEY)||'';
+  var gs=localStorage.getItem(GROOM);
+  var groomingOn = gs===null ? true : gs==='1';
+  var items=document.querySelectorAll('#style-feed .feed-item');
+  var chipW=document.getElementById('chip-women');
+  var chipM=document.getElementById('chip-men');
+  var note=document.getElementById('lane-note');
+  items.forEach(function(el){
+    var lane=el.getAttribute('data-lane')||'both';
+    var isGroom=el.getAttribute('data-grooming')==='1';
+    var show=true;
+    if(gender==='male'){
+      if(lane==='women') show=false;
+      if(isGroom && !groomingOn) show=false;
+    } else if(gender==='female'){
+      if(lane==='men') show=false;
+    } else {
+      if(isGroom && !groomingOn) show=false;
+    }
+    el.classList.toggle('is-hidden', !show);
+  });
+  var showW = gender!=='male';
+  var showM = gender!=='female';
+  chipW.classList.toggle('on', showW);
+  chipM.classList.toggle('on', showM);
+  if(gender==='male'){
+    note.innerHTML='Filtered by Settings · <strong>Male</strong> — men / barber'+(groomingOn?' + grooming':'')+' emphasised. <a href="settings.html">Change</a>';
+  } else if(gender==='female'){
+    note.innerHTML='Filtered by Settings · <strong>Female</strong> — women / colour emphasised. <a href="settings.html">Change</a>';
+  } else {
+    note.innerHTML='Showing both Men and Women lanes · set Gender in <a href="settings.html">Settings</a> to personalise.';
+  }
+})();
+</script>
+</main>
+
+<nav class="app-dock" aria-label="App shortcuts">
+<a  href="index.html"><span aria-hidden="true">⌂</span>Home</a>
+<a class="active" href="feed.html"><span aria-hidden="true">✦</span>Feed</a>
+<a  href="for-clients.html"><span aria-hidden="true">⌖</span>Find</a>
+<a  href="settings.html"><span aria-hidden="true">⚙</span>Prefs</a>
+<a  href="help-assist-contact.html"><span aria-hidden="true">?</span>Help</a>
+</nav>
+
+<footer class="footer"><div class="wrap">
+<div class="footer-grid">
+<div>
+<a class="brand" href="index.html" aria-label="ClipDen Network">
+<span class="brand-mark" aria-hidden="true"><img src="logo/clipden-mark.svg" alt=""></span>
+<span><span class="brand-word">ClipDen</span><span class="brand-sub">Network</span></span>
+</a>
+<p class="mt">People-first local hair and barber companion, prepared with Soft Chair honesty.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<p><a href="feed.html">Style news feed</a><br>
+<a href="for-clients.html">For clients</a><br>
+<a href="for-providers.html">For providers</a><br>
+<a href="settings.html">Settings</a><br>
+<a href="privacy.html">Privacy</a><br>
+<a href="terms-prep.html">Terms (PREP)</a></p>
+</div>
+<div>
+<h3>Need a hand?</h3>
+<p><a href="help-assist-contact.html">Help / Assist / Contact Us</a><br>
+Free static preview · no account required</p>
+</div>
+</div>
+<small>Preparation stub only · No store upload · No paid hosting · No payment or live booking in this preview · New ClipDen mark.</small>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>

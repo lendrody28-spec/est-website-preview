@@ -16,9 +16,13 @@
 ## Motto
 **Because every journey should end at home.**
 
+## ClipDen Network redesign (2026-09-30)
+New ClipDen logo + Soft Chair app redo lives in **`clipden/`** (mark, full-bleed hero, app chrome). Canonical Cuts stub is also `lendrody28-spec/smart-cuts-website-preview`.
+
 ## Pages
 | File | Job |
 |------|-----|
+| `clipden/` | ClipDen Network companion — new logo + app redesign |
 | `index.html` | Boss mobile wireframe: shield mark · motto · Explore Guardian · Guardian/Shield feature rows · then UX KEEP (roadmap, how 01–05, families, trust) |
 | `smart-guardian.html` | Crash Assist & Emergency Protection · ship-today honesty |
 | `smart-shield.html` | Headline: protect vehicle safety-system integrity · Available now — core integrity monitoring · **name unchanged** |
